@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Package Manager Servers Explorer & Uploader';
+  title = 'Pypi Server Uploader';
 }

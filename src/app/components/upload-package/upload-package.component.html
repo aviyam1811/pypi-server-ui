@@ -1,0 +1,15 @@
+<div class="center">
+  <h3>
+    <mat-form-field class="example-full-width">
+      <input [(ngModel)]="url" matInput placeholder="Pypi Server To Upload">
+    </mat-form-field>
+  </h3>
+  <file-drop headertext="Drop files here" (onFileDrop)="dropped($event)"></file-drop>
+  <mat-list>
+    <mat-list-item *ngFor="let file of files">
+      <h3 matLine> {{ file.relativePath }} </h3>
+      <button mat-fab (click)="removeFile(file)"><img src="/src/images/material_icons/delete_forever.svg"></button>
+    </mat-list-item>
+  </mat-list>
+  <button mat-fab (click)="uploadFiles()"><img src="/src/images/material_icons/cloud_upload.svg"></button>
+</div>

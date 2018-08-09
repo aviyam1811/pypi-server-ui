@@ -1,60 +1,40 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import { FileDropModule } from 'ngx-file-drop';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import {
+  MatListModule,
+  MatInputModule,
   MatButtonModule,
   MatDialogModule,
+  MatToolbarModule,
+  MatSnackBarModule,
   MatFormFieldModule,
-  MatInputModule,
-  MatListModule,
-  MatTabsModule,
-  MatToolbarModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { UploadPackageComponent } from './components/upload-package/upload-package.component';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './services/in-memory-data.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  AddPackageManagerServerDialogComponent,
-  ExplorePackageManagerServersComponent
-} from './components/explore-package-manager-servers/explore-package-manager-servers.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UploadPackageComponent,
-    ExplorePackageManagerServersComponent,
-    AddPackageManagerServerDialogComponent
-  ],
-  entryComponents: [
-    ExplorePackageManagerServersComponent,
-    AddPackageManagerServerDialogComponent
+    UploadPackageComponent
   ],
   imports: [
     FormsModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    AppRoutingModule,
-    FileDropModule,
-    MatGridListModule,
     MatListModule,
-    HttpClientModule,
-    MatToolbarModule,
+    BrowserModule,
+    FileDropModule,
+    MatInputModule,
     MatDialogModule,
     MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatTabsModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false , passThruUnknownUrl: true}
-    )
+    HttpClientModule,
+    MatToolbarModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
