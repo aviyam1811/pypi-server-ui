@@ -1,5 +1,5 @@
 {
-  "name": "pypi-server-ui",
+  "name": "package-manager-servers-explorer-uploader",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,16 +11,20 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^6.1.0",
+    "@angular/animations": "^6.1.1",
+    "@angular/cdk": "^6.4.1",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
     "@angular/core": "^6.1.0",
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
+    "@angular/material": "^6.4.1",
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "angular-in-memory-web-api": "^0.6.1",
     "core-js": "^2.5.4",
+    "ngx-file-drop": "^4.0.6",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

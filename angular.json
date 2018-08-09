@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pypi-server-ui": {
+    "package-manager-servers-explorer-uploader": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pypi-server-ui",
+            "outputPath": "dist/package-manager-servers-explorer-uploader",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pypi-server-ui:build"
+            "browserTarget": "package-manager-servers-explorer-uploader:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "pypi-server-ui:build:production"
+              "browserTarget": "package-manager-servers-explorer-uploader:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pypi-server-ui:build"
+            "browserTarget": "package-manager-servers-explorer-uploader:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "pypi-server-ui-e2e": {
+    "package-manager-servers-explorer-uploader-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "pypi-server-ui:serve"
+            "devServerTarget": "package-manager-servers-explorer-uploader:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "pypi-server-ui:serve:production"
+              "devServerTarget": "package-manager-servers-explorer-uploader:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "pypi-server-ui"
+  "defaultProject": "package-manager-servers-explorer-uploader"
 }

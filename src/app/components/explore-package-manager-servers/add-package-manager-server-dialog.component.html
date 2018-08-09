@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Let Us Know About The Package Manager Server You Use</h1>
+<form mat-dialog-content>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Name" [formControl]="nameFormControl"
+           [(ngModel)]="data.name">
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="URL" [formControl]="urlFormControl" [type]="url"
+           [(ngModel)]="data.url">
+    <mat-error *ngIf="urlFormControl.hasError('required')">
+      URL is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">I don't want</button>
+  <button mat-button [mat-dialog-close]="data">Ok</button>
+</div>
